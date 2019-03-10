@@ -12,20 +12,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(ggplot2);library(rgdal);library(leaflet);library(dplyr);library(htmltools);library(tidyr)
 # other code here to set-up your data file
-setwd("/Users/tianhewang/Desktop/ANLY512/Assignment\ 4")
+setwd("D:\\Work\\HU\\dataviz\\assignment4")
 allSchools <- read.csv("EasternSchools.csv", quote = "\"", header = TRUE)
 school_lvl1<- allSchools[which(allSchools$LEVEL==1), ]
 school_lvl2<- allSchools[which(allSchools$LEVEL==2), ]
 school_lvl3<- allSchools[which(allSchools$LEVEL==3), ]
 school_lvl4<- allSchools[which(allSchools$LEVEL==4), ]
 zips<-readOGR(dsn="./cb_2017_us_county_500k",layer="cb_2017_us_county_500k") # no file extension!
-
-
+counties <- readOGR(dsn="./Pennsylvania_School_Districts",layer="cb_2016_42_unsd_500k")
 ```
 
 ### Purpose
 
-This assignment includes a dataset containing information of randomly selected 700 public schools (around 3000 in total) in the eastern area of Pennsylvania. It shows some schools characteristics of the schools, such as geographic information, population of the students or grades of the student, etc. These offers many different dimensions and hints to show many interesting phenomonens in this Philadelphia area. In my report, I may emphasis on the races, especially Asia. As an international student comes from Asia, I would like to know about how Asian behaves in these school? Which level os school that has the most Asian? Or even after graduation, how these students go?
+This assignment includes a dataset containing information of randomly selected 700 public schools (around 3000 in total) in the eastern area of Pennsylvania. It shows some schools characteristics of the schools, such as geographic information, population of the students or grades of the student, etc. These offers many different dimensions and hints to show many interesting phenomonens in this Philadelphia area. In my report, I may emphasis on the races, as an international student , I would like to know about how different races behaves in these school? Which level os school that has the most non-native? Or even after graduation, how these students go?
 
 ### Methodology
 
@@ -38,14 +37,18 @@ The first thing I do here is to have an overview of the distribution of the scho
 `r plot(2:6,3:7,col='red')`. 
 
 ```{r warning=FALSE, message=FALSE}
-lvl1_schools = leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>% 
-                  addCircleMarkers(data=school_lvl1,lng=~LON,lat=~LAT, color="red", fillColor = "red")
-lvl2_schools = leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>% 
-                  addCircleMarkers(data=school_lvl2,lng=~LON,lat=~LAT, color="yellow", fillColor = "yellow")
-lvl3_schools = leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>% 
-                  addCircleMarkers(data=school_lvl3,lng=~LON,lat=~LAT, color="blue", fillColor = "blue")
-lvl4_schools = leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>% 
-                  addCircleMarkers(data=school_lvl4,lng=~LON,lat=~LAT, color="green", fillColor = "green")
+lvl1_schools = leaflet() %>% addTiles() %>% 
+                  addCircleMarkers(data=school_lvl1,lng=~LON,lat=~LAT, 
+                                   radius = 3, color="red", fillColor = "red")
+lvl2_schools = leaflet() %>% addTiles() %>% 
+                  addCircleMarkers(data=school_lvl2,lng=~LON,lat=~LAT, 
+                                   radius = 3, color="yellow", fillColor = "yellow")
+lvl3_schools = leaflet() %>% addTiles() %>% 
+                  addCircleMarkers(data=school_lvl3,lng=~LON,lat=~LAT, 
+                                   radius = 3, color="blue", fillColor = "blue")
+lvl4_schools = leaflet() %>% addTiles() %>% 
+                  addCircleMarkers(data=school_lvl4,lng=~LON,lat=~LAT, 
+                                   radius = 3, color="green", fillColor = "green")
 
 leaflet_grid <- 
   tagList(
@@ -64,19 +67,45 @@ leaflet_grid <-
 browsable(leaflet_grid)
 
 ```
-
-
-
-
-### Results
-
-
-### Conclusion
+Now lets emphasize on Level 1 school since we could see that level 1 school has the most people in Philadelpha area, which is more representative. From observation, all level 1 school cover G01 grade. I am trying to show the average grades' distribution of G01. By comparing the two rectangles, we could see that the location does matter on grades. Even though more school means deeper color density and overlapping thing may affect the grades' opacity. Students who lives nearby larger city has higher grades.
 
 ```{r warning=FALSE, message=FALSE}
-mean(cars$speed)  # replace this code for your first graph
+grades01 = school_lvl1$G01
+
+G01_grades = leaflet() %>% addTiles() %>%
+  addCircleMarkers(data = school_lvl1, radius = 1.5, fill = FALSE, color = "red", opacity = (grades01-20)/100,
+                   lng=~LON, lat=~LAT) %>%
+  addRectangles(lng1 = -74.90000, lat1 = 40.10000, lng2 = -75.40000, lat2 = 40.35000, color = "black", weight = 5,
+                fillColor = "transparent") %>%
+  addRectangles(lng1 = -75.70000, lat1 = 40.50000, lng2 = -75.10000, lat2 = 40.75000, color = "black", weight = 5,
+                fillColor = "transparent")
+G01_grades
 
 ```
 
-### Bibliography
-[^1]: Cohen, B. (2018). Name of a Book. (Knopf: NYC) 
+Would school categories affect students grades? The answer is no.
+
+```{r warning=FALSE, message=FALSE}
+m_school = allSchools %>% filter(magnetSchoolStatus == "Yes")
+c_school = allSchools %>% filter(isCHARTER == "Yes")
+
+school_grade = leaflet(counties) %>% addTiles() %>%
+  addPolygons(weight=1,color="blue",fillOpacity = .1) %>%
+  addCircleMarkers(data = m_school, radius = 2, color = "yellow", weight = 3, opacity = (grades01)/100, label = ~city) %>%
+  addCircleMarkers(data = c_school, radius = 2, color = "blue", weight = 3, opacity = (grades01)/100, label = ~city) %>%
+  addLegend("topright", colors = c("red", "green"), labels = c("magnet school", "charter school"), title = "Type of School", opacity = 1)
+school_grade
+```
+
+At last as an international from China, I would love to see on all levels aspects, which area/schools that Asians want to go most.
+```{r warning=FALSE, message=FALSE}
+asians = leaflet() %>% addTiles() %>% 
+  addCircleMarkers(data=allSchools,lng=~LON,lat=~LAT, 
+                   radius = 3, opacity = allSchools$raceASIAN / 100, color="purple", fillColor = "purple")
+asians
+```
+
+### Results & Conclusion
+In this report, I emphasize on the location, grades and races to see if these factors has any correlations between them. In larger city students are tending to behave well, at least from my inspection, students (grade 01) behave better in Philadelphia area than Allentown. However, I only compared grade 01. In the future work, I would list all level of grades to expand my research. 
+
+
