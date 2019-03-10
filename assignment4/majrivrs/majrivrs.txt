@@ -1,0 +1,156 @@
+Identification_Information:
+  Citation:
+    Citation_Information:
+      Originator: Environmental Resources Research Institute
+      Publication_Date: 1996
+      Title: Major rivers in Pennsylvania
+      Publication_Information:
+        Publication_Place: Harrisburg, PA
+        Publisher: Pennsylvania Department of Environnmental Protection
+      Other_Citation_Details:
+      Online_Linkage: http://www.pasda.psu.edu
+      Larger_Work_Citation:
+        Citation_Information:
+          Originator: Pennsylvania Department of Environmental Protection
+          Publication_Date: 199605
+          Title: Pennsylvania GIS Compendium
+          Publication_Information:
+            Publication_Place: Harrisburg, PA
+            Publisher: Pennsylvania Department of Environmental Protection
+          Other_Citation_Details:
+          Online_Linkage: http://www.dep.state.pa.us
+  Description:
+    Abstract:
+      Major rivers as derived from Pennsylvania Dept. of
+      Transportation's streams database, which is organized by county.
+    Purpose: educational
+  Time_Period_of_Content:
+    Time_Period_Information:
+      Single_Date/Time:
+        Calendar_Date: variable
+    Currentness_Reference: unknown
+  Status:
+    Progress: complete
+    Maintenance_and_Update_Frequency: with ongoing updates
+  Spatial_Domain:
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: -80.5181
+      East_Bounding_Coordinate: -74.6170
+      North_Bounding_Coordinate: 42.2340
+      South_Bounding_Coordinate: 39.6930
+  Keywords:
+    Theme:
+      Theme_Keyword_Thesaurus: none
+      Theme_Keyword: major rivers
+      Theme_Keyword: rivers
+    Place:
+      Place_Keyword_Thesaurus: none
+      Place_Keyword: Pennsylvania
+  Access_Constraints: none
+  Use_Constraints: intended scale of use 1:24,000
+  Point_of_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: George Baumer
+        Contact_Organization: Environmental Resources Research Institute
+      Contact_Address:
+        Address_Type: mailing
+        Address: Land and Water Building
+        City: University Park
+        State_or_Province: PA
+        Postal_Code: 16802
+      Contact_Voice_Telephone: 814-863-5541
+      Contact_Electronic_Mail_Address:
+      Contact_Instructions:
+  Browse_Graphic:
+    Browse_Graphic_File_Name: Pennsylvania major rivers
+    Browse_Graphic_File_Description:
+    Browse_Graphic_File_Type: JPEG
+Data_Quality_Information:
+  Lineage:
+    Source_Information:
+      Source_Citation:
+        Citation_Information:
+          Originator: Pennsylvania Department of Transportation
+          Publication_Date: 1995
+          Title: Major rivers
+          Publication_Information:
+            Publication_Place:
+            Publisher:
+          Other_Citation_Details:
+          Online_Linkage:
+      Type_of_Source_Media: cd-rom
+      Source_Time_Period_of_Content:
+        Time_Period_Information:
+          Single_Date/Time:
+            Calendar_Date: 1995
+        Source_Currentness_Reference:
+          Telephone call to Dwight MacLean at PennDot, GIS
+          Specialist, 717-787-6036
+      Source_Citation_Abbreviation: none
+      Source_Contribution: 1:24,000 USGS maps on mylar and type 10 mapping
+    Process_Step:
+      Process_Description:
+        Converted Intergraph Microstation files to ARCINFO format.
+        CD-rom titled Pennsylvania Carto/GIS contains both Intergraph and ESRI formatted
+        files
+      Process_Date: 1995
+Spatial_Reference_Information:
+  Horizontal_Coordinate_System_Definition:
+    Planar:
+      Map_Projection:
+        Map_Projection_Name: Albers
+Distribution_Information:
+  Distributor:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person:
+        Contact_Organization: Pennsylvania Department of Environmental Protection
+      Contact_Address:
+        Address_Type: mailing address
+        Address: P.O. Box 2063
+        City: Harrisburg
+        State_or_Province: PA
+        Postal_Code: 17105
+      Contact_Voice_Telephone: 717-783-2300
+      Contact_Electronic_Mail_Address:
+      Contact_Instructions:
+  Distribution_Liability:
+    Not for commercial use or resale.
+    The User shall save the Commonwealth and the Pennsylvania State University
+    harmless from any suits, claims or actions arising out of the use of the
+    data files or accompanying documentation, or arising out of any defect in
+    the data files or accompanying documentation.
+    The Commonwealth and the Pennsylvania State University excludes any and all
+    implied warranties and makes no warranty or representation with repsect to
+    the data files or accompanying documentation, including quality,
+    performance, merchantability, or fitness for a particular purpose.
+    These data files and documentation are provided -as is- and the User
+    assumes the entire risk as to their quality and performance.
+  Standard_Order_Process:
+    Digital_Form:
+      Digital_Transfer_Information:
+        Format_Name: ARC/INFO Export
+        Format_Version_Number:
+        Format_Version_Date:
+      Digital_Transfer_Option:
+    Fees: none
+Metadata_Reference_Information:
+  Metadata_Date: 19960830
+  Metadata_Review_Date: unknown
+  Metadata_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Melissa Lamont
+        Contact_Organization: The Pennsylvania State University
+      Contact_Address:
+        Address_Type: mailing
+        Address: Pattee Library
+        City: University Park
+        State_or_Province: PA
+        Postal_Code: 16802
+      Contact_Voice_Telephone: 814-863-0094
+      Contact_Electronic_Mail_Address: mml@psulias.psu.edu
+      Contact_Instructions:
+  Metadata_Standard_Name: Content Standards for Digital Spatial Metadata
+  Metadata_Standard_Version: 19940608

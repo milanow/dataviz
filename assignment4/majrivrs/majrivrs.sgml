@@ -1,0 +1,212 @@
+<!DOCTYPE metadata SYSTEM "metadata.dtd">
+<metadata>
+<idinfo>
+<citation>
+<citeinfo>
+<origin>Environmental Resources Research Institute</origin>
+<pubdate>1996</pubdate>
+<title>Major rivers in Pennsylvania</title>
+<pubinfo>
+<pubplace>Harrisburg, PA</pubplace>
+<publish>Pennsylvania Department of Environnmental Protection</publish>
+</pubinfo>
+<othercit></othercit>
+<onlink>http://www.pasda.psu.edu</onlink>
+<lworkcit>
+<citeinfo>
+<origin>Pennsylvania Department of Environmental Protection</origin>
+<pubdate>199605</pubdate>
+<title>Pennsylvania GIS Compendium</title>
+<pubinfo>
+<pubplace>Harrisburg, PA</pubplace>
+<publish>Pennsylvania Department of Environmental Protection</publish>
+</pubinfo>
+<othercit></othercit>
+<onlink>http://www.dep.state.pa.us</onlink>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</citation>
+<descript>
+<abstract>
+Major rivers as derived from Pennsylvania Dept. of
+Transportation's streams database, which is organized by county.
+</abstract>
+<purpose>educational</purpose>
+</descript>
+<timeperd>
+<timeinfo>
+<sngdate>
+<caldate>variable</caldate>
+</sngdate>
+</timeinfo>
+<current>unknown</current>
+</timeperd>
+<status>
+<progress>complete</progress>
+<update>with ongoing updates</update>
+</status>
+<spdom>
+<bounding>
+<westbc>-80.5181</westbc>
+<eastbc>-74.6170</eastbc>
+<northbc>42.2340</northbc>
+<southbc>39.6930</southbc>
+</bounding>
+</spdom>
+<keywords>
+<theme>
+<themekt>none</themekt>
+<themekey>major rivers</themekey>
+<themekey>rivers</themekey>
+</theme>
+<place>
+<placekt>none</placekt>
+<placekey>Pennsylvania</placekey>
+</place>
+</keywords>
+<accconst>none</accconst>
+<useconst>intended scale of use 1:24,000</useconst>
+<ptcontac>
+<cntinfo>
+<cntperp>
+<cntper>George Baumer</cntper>
+<cntorg>Environmental Resources Research Institute</cntorg>
+</cntperp>
+<cntaddr>
+<addrtype>mailing</addrtype>
+<address>Land and Water Building</address>
+<city>University Park</city>
+<state>PA</state>
+<postal>16802</postal>
+</cntaddr>
+<cntvoice>814-863-5541</cntvoice>
+<cntemail></cntemail>
+<cntinst></cntinst>
+</cntinfo>
+</ptcontac>
+<browse>
+<browsen>Pennsylvania major rivers</browsen>
+<browsed></browsed>
+<browset>JPEG</browset>
+</browse>
+</idinfo>
+<dataqual>
+<lineage>
+<srcinfo>
+<srccite>
+<citeinfo>
+<origin>Pennsylvania Department of Transportation</origin>
+<pubdate>1995</pubdate>
+<title>Major rivers</title>
+<pubinfo>
+<pubplace></pubplace>
+<publish></publish>
+</pubinfo>
+<othercit></othercit>
+<onlink></onlink>
+</citeinfo>
+</srccite>
+<typesrc>cd-rom</typesrc>
+<srctime>
+<timeinfo>
+<sngdate>
+<caldate>1995</caldate>
+</sngdate>
+</timeinfo>
+<srccurr>
+Telephone call to Dwight MacLean at PennDot, GIS
+Specialist, 717-787-6036
+</srccurr>
+</srctime>
+<srccitea>none</srccitea>
+<srccontr>1:24,000 USGS maps on mylar and type 10 mapping</srccontr>
+</srcinfo>
+<procstep>
+<procdesc>
+Converted Intergraph Microstation files to ARCINFO format.
+CD-rom titled Pennsylvania Carto/GIS contains both Intergraph and ESRI formatted
+files
+</procdesc>
+<procdate>1995</procdate>
+</procstep>
+</lineage>
+</dataqual>
+<spref>
+<horizsys>
+<planar>
+<mapproj>
+<mapprojn>Albers</mapprojn>
+</mapproj>
+</planar>
+</horizsys>
+</spref>
+<distinfo>
+<distrib>
+<cntinfo>
+<cntperp>
+<cntper></cntper>
+<cntorg>Pennsylvania Department of Environmental Protection</cntorg>
+</cntperp>
+<cntaddr>
+<addrtype>mailing address</addrtype>
+<address>P.O. Box 2063</address>
+<city>Harrisburg</city>
+<state>PA</state>
+<postal>17105</postal>
+</cntaddr>
+<cntvoice>717-783-2300</cntvoice>
+<cntemail></cntemail>
+<cntinst></cntinst>
+</cntinfo>
+</distrib>
+<distliab>
+Not for commercial use or resale.
+The User shall save the Commonwealth and the Pennsylvania State University
+harmless from any suits, claims or actions arising out of the use of the
+data files or accompanying documentation, or arising out of any defect in
+the data files or accompanying documentation.
+The Commonwealth and the Pennsylvania State University excludes any and all
+implied warranties and makes no warranty or representation with repsect to
+the data files or accompanying documentation, including quality,
+performance, merchantability, or fitness for a particular purpose.
+These data files and documentation are provided -as is- and the User
+assumes the entire risk as to their quality and performance.
+</distliab>
+<stdorder>
+<digform>
+<digtinfo>
+<formname>ARC/INFO Export</formname>
+<formvern></formvern>
+<formverd></formverd>
+</digtinfo>
+<digtopt></digtopt>
+</digform>
+<fees>none</fees>
+</stdorder>
+</distinfo>
+<metainfo>
+<metd>19960830</metd>
+<metrd>unknown</metrd>
+<metc>
+<cntinfo>
+<cntperp>
+<cntper>Melissa Lamont</cntper>
+<cntorg>The Pennsylvania State University</cntorg>
+</cntperp>
+<cntaddr>
+<addrtype>mailing</addrtype>
+<address>Pattee Library</address>
+<city>University Park</city>
+<state>PA</state>
+<postal>16802</postal>
+</cntaddr>
+<cntvoice>814-863-0094</cntvoice>
+<cntemail>mml@psulias.psu.edu</cntemail>
+<cntinst></cntinst>
+</cntinfo>
+</metc>
+<metstdn>Content Standards for Digital Spatial Metadata</metstdn>
+<metstdv>19940608</metstdv>
+</metainfo>
+</metadata>

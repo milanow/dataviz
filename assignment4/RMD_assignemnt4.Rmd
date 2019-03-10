@@ -1,0 +1,82 @@
+---
+title: "ANLY512 Assignment 4"
+author: "Tianhe Wang"
+date: "03/05/2019"
+output: 
+        html_document:
+                code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2);library(rgdal);library(leaflet);library(dplyr);library(htmltools);library(tidyr)
+# other code here to set-up your data file
+setwd("/Users/tianhewang/Desktop/ANLY512/Assignment\ 4")
+allSchools <- read.csv("EasternSchools.csv", quote = "\"", header = TRUE)
+school_lvl1<- allSchools[which(allSchools$LEVEL==1), ]
+school_lvl2<- allSchools[which(allSchools$LEVEL==2), ]
+school_lvl3<- allSchools[which(allSchools$LEVEL==3), ]
+school_lvl4<- allSchools[which(allSchools$LEVEL==4), ]
+zips<-readOGR(dsn="./cb_2017_us_county_500k",layer="cb_2017_us_county_500k") # no file extension!
+
+
+```
+
+### Purpose
+
+This assignment includes a dataset containing information of randomly selected 700 public schools (around 3000 in total) in the eastern area of Pennsylvania. It shows some schools characteristics of the schools, such as geographic information, population of the students or grades of the student, etc. These offers many different dimensions and hints to show many interesting phenomonens in this Philadelphia area. In my report, I may emphasis on the races, especially Asia. As an international student comes from Asia, I would like to know about how Asian behaves in these school? Which level os school that has the most Asian? Or even after graduation, how these students go?
+
+### Methodology
+
+For the questions I have brought along with the report (mentioned in 'Purpose' section). I need to pick up some data I am really interested in. Data such as Race, Grades, School Category, Location. And show it up on map since the area information matters in my analysis.
+
+
+### Analysis
+The first thing I do here is to have an overview of the distribution of the schools in Philadelphia area. Normally a school has a certainly level range. Having inspected the dataset and internet, the higher levels of schools indicates higher education levels. Levels are from pre kindergarten, kindergarten, G01 to G13. Level 1 school covers all levels up to G06, sometimes G04 or G05. Level 2 school covers levels from G04 to G06, Level 3 covers from G07 to G12, Level 4 covers all the way to G13. The distribution of different schools' levels are almost the same. However from the density of school level, we could see that low level schools still take high percentages in schools.
+
+`r plot(2:6,3:7,col='red')`. 
+
+```{r warning=FALSE, message=FALSE}
+lvl1_schools = leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>% 
+                  addCircleMarkers(data=school_lvl1,lng=~LON,lat=~LAT, color="red", fillColor = "red")
+lvl2_schools = leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>% 
+                  addCircleMarkers(data=school_lvl2,lng=~LON,lat=~LAT, color="yellow", fillColor = "yellow")
+lvl3_schools = leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>% 
+                  addCircleMarkers(data=school_lvl3,lng=~LON,lat=~LAT, color="blue", fillColor = "blue")
+lvl4_schools = leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>% 
+                  addCircleMarkers(data=school_lvl4,lng=~LON,lat=~LAT, color="green", fillColor = "green")
+
+leaflet_grid <- 
+  tagList(
+    tags$table(width = "100%",
+         tags$tr(
+           tags$td(lvl1_schools),
+           tags$td(lvl2_schools)
+         ),
+         tags$tr(
+           tags$td(lvl3_schools),
+           tags$td(lvl4_schools)
+         )
+    )
+  )
+
+browsable(leaflet_grid)
+
+```
+
+
+
+
+### Results
+
+
+### Conclusion
+
+```{r warning=FALSE, message=FALSE}
+mean(cars$speed)  # replace this code for your first graph
+
+```
+
+### Bibliography
+[^1]: Cohen, B. (2018). Name of a Book. (Knopf: NYC) 

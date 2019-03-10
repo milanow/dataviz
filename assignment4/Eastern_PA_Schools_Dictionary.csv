@@ -1,0 +1,45 @@
+LEA_NAME,Name of school district
+SCH_NAME,school name
+isCHARTER,is school a charter school
+PK,grade pre kindergarten
+KG,Grade is KG
+G01,Grade is G01
+G02,Grade is G02
+G03,Grade is G03
+G04,Grade is G04
+G05,Grade is G05
+G06,Grade is G06
+G07,Grade is G07
+G08,Grade is G08
+G09,Grade is G09
+G10,Grade is G10
+G11,Grade is G11
+G12,Grade is G12
+G13,Grade is G13
+LEVEL,School Level
+MAGNETschoolStatus,Is school a magnet school?
+city,City
+MEMBER,Enrollment
+zip,ZipCode
+PctFreeLunch,Percent of Students Eligible for Free Lunch (indicator of low income)
+SCH_TYPE_TEXT,Type of school
+TOTFRL,Number of students eligble for free lunch
+Census_AttainDiplomHigher,Census Community Data: Census_AttainDiplomHigher
+Census_LangHomeNotEnglish,Census Community Data: Census_LangHomeNotEnglish
+Census_Pop25older,Census Community Data: Census_Pop25older
+Census_TotalHouseholds,Census Community Data: Census_TotalHouseholds
+LAT,Latitude
+LON,Longitude
+AttendRate,Attedance Rate - annual
+PctProfELA,Percent students who were proficient on the English exam (PSSA)
+raceWHITE,
+raceAMERIND,
+raceASIAN,
+raceBLACK,
+raceHI,
+numberHispanic,
+TR,
+LEAID,unique Federal ID for school district; there are 500 districts in PA in 67 counties
+aun2,state ID for school
+NCESSCH,Federal ID for school
+ST_LEAID,state ID for district

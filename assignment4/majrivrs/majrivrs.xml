@@ -1,0 +1,235 @@
+<?xml version = "1.0"?>
+<!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
+<metadata>
+<idinfo>
+<citation>
+<citeinfo>
+<origin>Environmental Resources Research Institute</origin>
+<pubdate>1996</pubdate>
+<title>Major rivers in Pennsylvania</title>
+<pubinfo>
+<pubplace>Harrisburg, PA</pubplace>
+<publish>Pennsylvania Department of Environnmental Protection</publish>
+</pubinfo>
+<othercit></othercit>
+<onlink>ftp://www.pasda.psu.edu/pub/pasda/compendium/majrivrs.zip</onlink>
+<lworkcit>
+<citeinfo>
+<origin>Pennsylvania Department of Environmental Protection</origin>
+<pubdate>199605</pubdate>
+<title>Pennsylvania GIS Compendium</title>
+<pubinfo>
+<pubplace>Harrisburg, PA</pubplace>
+<publish>Pennsylvania Department of Environmental Protection</publish>
+</pubinfo>
+<othercit></othercit>
+<onlink>
+http://www.pasda.psu.edu/search.cgi?k=GIS+compendium
+</onlink>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</citation>
+<descript>
+<abstract>
+Major rivers as derived from Pennsylvania Dept. of
+Transportation's streams database, which is organized by county.
+</abstract>
+<purpose>educational</purpose>
+<supplinf>For use at scales of 1:24,000 or smaller.</supplinf>
+</descript>
+<timeperd>
+<timeinfo>
+<sngdate>
+<caldate>
+variable
+</caldate>
+</sngdate>
+</timeinfo>
+<current>unknown</current>
+</timeperd>
+<status>
+<progress>complete</progress>
+<update>with ongoing updates</update>
+</status>
+<spdom>
+<bounding>
+<westbc>-80.5181</westbc>
+<eastbc>-74.6170</eastbc>
+<northbc>42.2340</northbc>
+<southbc>
+39.6930
+</southbc>
+</bounding>
+</spdom>
+<keywords>
+<theme>
+<themekt>none</themekt>
+<themekey>major rivers</themekey>
+<themekey>rivers</themekey>
+</theme>
+<place>
+<placekt>none</placekt>
+<placekey>
+Pennsylvania
+</placekey>
+</place>
+</keywords>
+<accconst>
+none
+
+&lt;!DOCTYPE metadata SYSTEM 'metadata.dtd'&gt;
+</accconst>
+<useconst>
+For educational/demonstration purposes only.  The Originator, Publisher and Distributor exclude any and all implied warranties and make no warranty or representation with respect to the data files or accompanying documentation, including quality, performance, merchantability or fitness for a particular purpose. These data files and documentation are provided 'as is' and the User assumes the entire risk as to their quality and performance.&lt;br&gt;
+
+These data are not to be redistributed for commercial profit.  Reproduction or redistribution of this digital data set without permission of the Originator/Publisher is expressly forbidden.  The Originator and Publisher should be clearly cited in any product derived from this data.  Any modifications to this data must be described in any digital or hardcopy product derived from this data.
+</useconst>
+<ptcontac>
+<cntinfo>
+<cntorgp>
+<cntorg>Environmental Resources Research Institute</cntorg>
+<cntper>George Baumer</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing</addrtype>
+<address>Land and Water Building</address>
+<city>University Park</city>
+<state>PA</state>
+<postal>16802</postal>
+</cntaddr>
+<cntvoice>814-863-5541</cntvoice>
+<cntemail>gmb@psu.edu</cntemail>
+<cntinst></cntinst>
+</cntinfo>
+</ptcontac>
+</idinfo>
+<dataqual>
+<lineage>
+<srcinfo>
+<srccite>
+<citeinfo>
+<origin>Pennsylvania Department of Transportation</origin>
+<pubdate>1995</pubdate>
+<title>Major rivers</title>
+<pubinfo>
+<pubplace></pubplace>
+<publish></publish>
+</pubinfo>
+<othercit></othercit>
+<onlink></onlink>
+</citeinfo>
+</srccite>
+<typesrc>cd-rom</typesrc>
+<srctime>
+<timeinfo>
+<sngdate>
+<caldate>
+1995
+</caldate>
+</sngdate>
+</timeinfo>
+<srccurr>
+Telephone call to Dwight MacLean at PennDot, GIS
+Specialist, 717-787-6036
+</srccurr>
+</srctime>
+<srccitea>none</srccitea>
+<srccontr>1:24,000 USGS maps on mylar and type 10 mapping</srccontr>
+</srcinfo>
+<procstep>
+<procdesc>
+Converted Intergraph Microstation files to ARCINFO format.
+CD-rom titled Pennsylvania Carto/GIS contains both Intergraph and ESRI formatted
+files
+</procdesc>
+<procdate>
+1995
+</procdate>
+</procstep>
+</lineage>
+</dataqual>
+
+<spref><horizsys><planar><mapproj><mapprojn>Albers Conical Equal Area</mapprojn><albers><stdparll>40</stdparll><stdparll>42</stdparll><longcm>-78</longcm><latprjo>39</latprjo><feast>0.0</feast><fnorth>
+0.0
+</fnorth></albers></mapproj><planci><plance>coordinate pair</plance><coordrep><absres>unknown</absres><ordres>unknown</ordres></coordrep><plandu>
+meters
+</plandu></planci></planar><geodetic><horizdn>North American Datum of 1927</horizdn><ellips>Clarke 1866</ellips><semiaxis>6378206.4</semiaxis><denflat>
+294.98
+</denflat></geodetic></horizsys></spref>
+<distinfo>
+<distrib>
+<cntinfo>
+<cntperp>
+<cntper></cntper>
+<cntorg>Pennsylvania Department of Environmental Protection</cntorg>
+</cntperp>
+<cntaddr>
+<addrtype>mailing</addrtype>
+<address>P.O. Box 2063</address>
+<city>Harrisburg</city>
+<state>PA</state>
+<postal>17105</postal>
+</cntaddr>
+<cntvoice>717-783-2300</cntvoice>
+<cntemail></cntemail>
+<cntinst></cntinst>
+</cntinfo>
+</distrib>
+<distliab>
+Not for commercial use or resale.
+The User shall save the Commonwealth and the Pennsylvania State University
+harmless from any suits, claims or actions arising out of the use of the
+data files or accompanying documentation, or arising out of any defectin
+the data files or accompanying documentation.
+The Commonwealth and the Pennsylvania State University excludes any and all
+implied warranties and makes no warranty or representation with respect to
+the data files or accompanying documentation, including quality,
+performance, merchantability, or fitness for a particular purpose. These
+data files and documentation are provided AS IS and the User assumes
+the entire risk as to their quality and performance
+</distliab>
+<stdorder>
+<digform>
+<digtinfo>
+<formname>ARC/Info Export</formname>
+<formvern>7.x</formvern>
+<filedec>zip</filedec>
+</digtinfo>
+<digtopt>
+<onlinopt>
+<computer>
+<networka>
+<networkr>
+ftp://www.pasda.psu.edu/pub/pasda/compendium/
+</networkr>
+</networka>
+</computer>
+<accinstr>
+http://www.pasda.psu.edu
+</accinstr>
+</onlinopt>
+</digtopt>
+</digform>
+<fees>
+none
+</fees>
+</stdorder>
+</distinfo>
+<metainfo>
+<metd>19980409</metd>
+<metrd>19991008</metrd>
+<metc>
+<cntinfo>
+<cntorgp>
+<cntorg>PASDA</cntorg>
+</cntorgp>
+<cntemail>
+pasda@psu.edu
+</cntemail>
+</cntinfo>
+</metc>
+<metstdn>Content Standards for Digital Geospatial Metadata</metstdn>
+<metstdv>FGDC-STD-001-1998</metstdv>
+</metainfo>
+</metadata>
