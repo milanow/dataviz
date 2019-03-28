@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 
 library(ggplot2);library(dplyr);library(igraph)
-setwd("/Users/tianhewang/Desktop/ANLY512/Assignment5")
+setwd("/Users/tianhewang/Desktop/HU/ANLY512/dataviz/assignment5")
 nodes <- read.csv("nodes.csv", quote = "\"", header = TRUE)
 edges <- read.csv("edges.csv", quote = "\"", header = TRUE)
 g1 <-graph_from_data_frame(d=edges, vertices=nodes, directed=FALSE)
@@ -75,11 +75,24 @@ plot(clp, g3,
 
 ### Part 3: Social Network Analysis Statistics
 ```{r warning=FALSE, message=FALSE}
-plot(betweenness(g3))
-
-plot(degree(g3))
+bet <- betweenness(g3)
+df = data.frame(name = names(bet), bw = bet)
+ggplot(data = df, aes(x = name, y = bw)) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Student Names") +
+  ylab("Betweenness")
 ```
 
+```{r warning=FALSE, message=FALSE}
+deg <- degree(g3)
+df2 = data.frame(name = names(deg), degree = deg)
+ggplot(data = df2, aes(x = name, y = degree)) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Student Names") +
+  ylab("Degrees")
+```
 ### Part 4: Results
 
 

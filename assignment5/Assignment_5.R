@@ -1,7 +1,7 @@
 library(igraph)
 library(cluster)
 library(ggplot2)
-setwd("/Users/tianhewang/Desktop/ANLY512/Assignment5")
+setwd("/Users/tianhewang/Desktop/HU/ANLY512/dataviz/assignment5")
 
 nodes <- read.csv("nodes.csv", quote = "\"", header = TRUE)
 edges <- read.csv("edges.csv", quote = "\"", header = TRUE)
@@ -60,3 +60,20 @@ plot(clp, g3,
 
 #####################
 bet <- betweenness(g3)
+head(bet)
+df = data.frame(name = names(bet), bw = bet)
+ggplot(data = df, aes(x = name, y = bw)) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Student Names") +
+  ylab("Betweenness")
+
+deg <- degree(g3)
+df2 = data.frame(name = names(deg), degree = deg)
+ggplot(data = df2, aes(x = name, y = degree)) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Student Names") +
+  ylab("Degrees")
+
+       
