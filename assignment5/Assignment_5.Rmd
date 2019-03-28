@@ -1,0 +1,99 @@
+---
+title: "ANLY512 Assignment 5"
+author: "Tianhe Wang"
+date: "03/26/2019"
+output: 
+        html_document:
+                code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2);library(dplyr);library(igraph)
+setwd("/Users/tianhewang/Desktop/HU/ANLY512/dataviz/assignment5")
+nodes <- read.csv("nodes.csv", quote = "\"", header = TRUE)
+edges <- read.csv("edges.csv", quote = "\"", header = TRUE)
+g1 <-graph_from_data_frame(d=edges, vertices=nodes, directed=FALSE)
+g2 <-graph_from_data_frame(d=edges, vertices=nodes, directed=FALSE)
+g3 <-graph_from_data_frame(d=edges, vertices=nodes, directed=FALSE)
+```
+
+### Purpose
+
+### Methodology
+
+### Part 1: Data Processing 
+I manullay separate the .csv data to to data files, since most of the information provided by students' surveies are 
+
+### Part 2: Social Network Analysis
+The first SNA graph shows a general idea of the students' 
+```{r warning=FALSE, message=FALSE}
+set.seed(100)
+V(g1)$size <- log(strength(g1)) * 6
+par(mar=c(0, 0, 0, 0))
+V(g1)$color <- NA
+V(g1)$color <- ifelse(V(g1)$sex == "Male", "lightblue", "pink")
+plot(g1,
+     vertex.label.color = "black", # change color of labels
+     vertex.label.cex = .75, # change size of labels to 75% of original size
+     edge.curved=.25, # add a 25% curve to the edges
+     edge.color="grey20") # change edge color to grey
+legend(x = 0.7, y = 0.9, legend = c("Male", "Female", "Don't Know"),
+       pch = 21, pt.bg = c("lightblue", "pink", "white"))
+```
+The second graph shows
+```{r warning=FALSE, message=FALSE}
+par(mar=c(2, 1, 1, 2))
+set.seed(700)
+V(g2)$size <- 20
+E(g2)$color <- NA
+E(g2)$color <- ifelse(E(g2)$sf == "Yes", "red", "green")
+                      #ifelse(E(g2)$sf == "No", "green", "black"))
+plot(g2,
+     vertex.color = "yellow",
+     vertex.label.color = "black", # change color of labels
+     vertex.label.cex = .75, # change size of labels to 75% of original size
+     layout=layout_in_circle, main="Circle",
+     edge.curved=.25) # add a 25% curve to the edges
+
+legend(x = 0.85, y = 1, legend = c("Same Industry", "Not Same Industry"),
+       pch = 21, pt.bg = c("red", "green"))
+```
+The third grpah shows the communities formed up by the social network graph.
+
+```{r warning=FALSE, message=FALSE}
+par(mar=c(0, 0, 0, 0))
+set.seed(3545)
+clp <- cluster_optimal(g3)
+class(clp)
+plot(clp, g3,
+     vertex.label.color = "black",
+     vertex.label.cex = .75)
+
+```
+
+### Part 3: Social Network Analysis Statistics
+```{r warning=FALSE, message=FALSE}
+bet <- betweenness(g3)
+df = data.frame(name = names(bet), bw = bet)
+ggplot(data = df, aes(x = name, y = bw)) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Student Names") +
+  ylab("Betweenness")
+```
+
+```{r warning=FALSE, message=FALSE}
+deg <- degree(g3)
+df2 = data.frame(name = names(deg), degree = deg)
+ggplot(data = df2, aes(x = name, y = degree)) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Student Names") +
+  ylab("Degrees")
+```
+### Part 4: Results
+
+
+### Part 5: Conclusion
