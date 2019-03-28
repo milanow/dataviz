@@ -1,0 +1,19 @@
+"","Timestamp","What is YOUR name?","Student 1: Who have you worked with?","Student 1: Number times you worked with this student this semester (enter a number)","Student 1: Is this student male or female?","Student 1: Is this person in the same professional field as you?","Student 1: About how many MILES away does this student live from where you live now? (use -999 if unknown)","Student 2: Who else have you worked with?","Student 2: Number times you worked with THIS student this semester (enter a number)","Student 2: Is this student male or female?","Student 2: Is this person in the same professional field as you?","Student 2: About how many MILES away does this student live from where you live now? (use -999 if unknown)","Student 3: Who else have you worked with?","Student 3: Number times you worked with this student this semester (enter a number)","Student 3: Is this student male or female?","Student 3: Is this person in the same professional field as you?","Student 3: About how many MILES away does this student live from where you live now? (use -999 if unknown)"
+"1","3/14/2019 1:29:43","Barbara Susuhwe Asiedu","Oluwatobi Akinyemi",1,"Male","Don't Know","999","Pavan Lakhubhai Chavda",1,"Male","Don't Know",20,"Zeeshan Bashir",1,"Male","Don't Know",1521
+"2","3/14/2019 10:17:47","Oluwatobi Akinyemi","Barbara Susuhwe Asiedu",2,"Female","Don't Know","165","Pavan Lakhubhai Chavda",8,"Male","Don't Know",222,"Oluwadamilola Akanni",1,"Female","Don't Know",2198
+"3","3/14/2019 14:16:20","Oluwadamilola Akanni","Kanika Bhalla",3,"Female","No","2067","Oluwatobi Akinyemi",1,"Male","Don't Know",-999,"Oluwadamilola Akanni",10,"Female","Yes",0
+"4","3/14/2019 14:27:49","Kanika Bhalla","Oluwadamilola Akanni",2,"Female","No","2067","Shriya Deshmukh",0,"Female","No",999,"Paritosh Tiwari",1,"Male","No",999
+"5","3/14/2019 22:28:51","Subhash Pemmaraju","Raghu Mohan Sanugommula",4,"Male","No","3000","Karan Ketan Parekh",1,"Male","No",-999,"Rohan Mayank Mashru",1,"Male","Don't Know",-999
+"6","3/16/2019 7:42:02","Raghu Mohan Sanugommula","Subhash Pemmaraju",4,"Male","Yes","2300","Karan Ketan Parekh",1,"Male","Yes",10,"Rohan Mayank Mashru",1,"Male","Don't Know",999
+"7","3/16/2019 12:41:30","Karan Ketan Parekh","Rohan Mayank Mashru",3,"Male","No","5","Raghu Mohan Sanugommula",1,"Male","No",5,"Subhash Pemmaraju",1,"Male","No",999
+"8","3/16/2019 12:43:57","Vinay Kumar Aavula","Vinay Kumar Aavula",1,"Male","Yes","0","Vinay Kumar Aavula",1,"Male","Yes",0,"Vinay Kumar Aavula",1,"Male","Yes",0
+"9","3/16/2019 12:46:06","Jiaoyan Zhang","Tianhe Wang",2,"Male","No","2441","Lan Shen",1,"Female","No",13,"Tongtian Fan",1,"Male","No",1131
+"10","3/16/2019 12:49:17","Jiaqi Fan","Paritosh Tiwari",1,"Male","No","-999","Paritosh Tiwari",1,"Male","No",-999,"Paritosh Tiwari",1,"Male","No",-999
+"11","3/16/2019 13:06:43","Doruk Sinan Adali","Nazli Mergen",4,"Female","No","13.8",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"12","3/16/2019 13:07:33","Jiaqi Fan","Paritosh Tiwari",1,"Male","No","-999",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"13","3/16/2019 13:09:21","Nazli Mergen","Doruk Sinan Adali",4,"Male","No","13.8",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"14","3/16/2019 13:24:47","Pavan Lakhubhai Chavda","Barbara Susuhwe Asiedu",1,"Female","Yes","100","Oluwatobi Akinyemi",4,"Male","Yes",150,NA,NA,NA,NA,NA
+"15","3/16/2019 14:41:33","Tongtian Fan","Lan Shen",2,"Female","No","900","Tianhe Wang",1,"Male","Yes",-999,NA,NA,NA,NA,NA
+"16","3/16/2019 20:07:43","Shriya Deshmukh","Tu Ngoc Anh Nguyen",1,"Female","No","40.7128° N, 74.0060° W","Doruk Sinan Adali",1,"Male","No",-999,"Nazli Mergen",1,"Female","No",-999
+"17","3/16/2019 20:45:39","Yash Rajiv Pillai","Paritosh Tiwari",1,"Male","Don't Know","-999","Subhash Pemmaraju",1,"Male","Don't Know",-999,"Shriya Deshmukh",1,"Female","Don't Know",-999
+"18","3/16/2019 22:53:00","Tianhe Wang","Jiaoyan Zhang",2,"Female","No","-999","Tongtian Fan",1,"Male","No",-999,"Lan Shen",1,"Female","Don't Know",-999
