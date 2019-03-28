@@ -2,16 +2,17 @@
 title: "ANLY512 Assignment 5"
 author: "Tianhe Wang"
 date: "03/26/2019"
-output: 
-        html_document:
-                code_folding: hide
+output:
+  pdf_document: default
+  html_document:
+    code_folding: hide
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
 library(ggplot2);library(dplyr);library(igraph)
-setwd("/Users/tianhewang/Desktop/HU/ANLY512/dataviz/assignment5")
+setwd("D:\\Work\\HU\\dataviz\\assignment5")
 nodes <- read.csv("nodes.csv", quote = "\"", header = TRUE)
 edges <- read.csv("edges.csv", quote = "\"", header = TRUE)
 g1 <-graph_from_data_frame(d=edges, vertices=nodes, directed=FALSE)
@@ -20,14 +21,17 @@ g3 <-graph_from_data_frame(d=edges, vertices=nodes, directed=FALSE)
 ```
 
 ### Purpose
+This dataset provided here includes all the students's internal networking information within ANLY512 class. The information mainly describes the coorperation relationship among students since this course has many opportunities for students to work together. Gradually, it may or may not form up small groups, through this social network analysis, I intend to checkout what kind of clusters in this network, combined with many attributes like working similarity or living distance to have a glance of classmates relationship gragh in my mind.
 
 ### Methodology
+The most important thing I want to emphasize is what is the most significant factor that makes the clusters. I would use social networking graphs and SNA statistics to point out and summarize what characteristics that a 'hub' in the networking graph have.
 
 ### Part 1: Data Processing 
-I manullay separate the .csv data to to data files, since most of the information provided by students' surveies are 
+I manullay separate the .csv data to to data files, since most of the information provided by students' surveies are asymmetric. They even have different answers to the same objective question. Makes the data dirty and hard to use.
 
 ### Part 2: Social Network Analysis
-The first SNA graph shows a general idea of the students' 
+The first SNA graph shows the information of students' gender and coorperation times with others. In this graph, Blue vertice represents male student, pink vertice represents female student. There is another category of "Don't know" because some students have taken the survey and filled out the coorperation conditions but no other students mention him/her. Despite the unstable factor, we normally have a bias that people with same gender would work together since communications between same gender are easier and more fluent. However, in this graph, it doesn't show that kind of sign. 
+
 ```{r warning=FALSE, message=FALSE}
 set.seed(100)
 V(g1)$size <- log(strength(g1)) * 6
@@ -42,7 +46,8 @@ plot(g1,
 legend(x = 0.7, y = 0.9, legend = c("Male", "Female", "Don't Know"),
        pch = 21, pt.bg = c("lightblue", "pink", "white"))
 ```
-The second graph shows
+
+The second graph shows if people have coorperated together are in the same industry. I use circle since I want to make the graph clear and organized and this gragh has nothing to do with 'length' or 'thickness'. From the graph, we could conclude that students normally won't consider their working industry similarity when choosing their partner.
 ```{r warning=FALSE, message=FALSE}
 par(mar=c(2, 1, 1, 2))
 set.seed(700)
@@ -60,7 +65,7 @@ plot(g2,
 legend(x = 0.85, y = 1, legend = c("Same Industry", "Not Same Industry"),
        pch = 21, pt.bg = c("red", "green"))
 ```
-The third grpah shows the communities formed up by the social network graph.
+The third grpah shows the communities formed up by the social network graph. Which is also the most interesting graph. the green, blue, red, purple clusters are pretty tight and they are all 4 people. Which means students tend to choose the same partners working on different assignments. They grow their network through known people.
 
 ```{r warning=FALSE, message=FALSE}
 par(mar=c(0, 0, 0, 0))
@@ -74,6 +79,7 @@ plot(clp, g3,
 ```
 
 ### Part 3: Social Network Analysis Statistics
+I mainly care about the betweenness and degree for each students as nodes. Degrees and Betweenness all represent the importance of a node inside a graph. We could slightly find out that student who has high betweenness always has high degree. Student like Kanika Bhalla and Sgruta Deshmukh play vital roles (like hub) in the small network.
 ```{r warning=FALSE, message=FALSE}
 bet <- betweenness(g3)
 df = data.frame(name = names(bet), bw = bet)
@@ -83,7 +89,6 @@ ggplot(data = df, aes(x = name, y = bw)) +
   xlab("Student Names") +
   ylab("Betweenness")
 ```
-
 ```{r warning=FALSE, message=FALSE}
 deg <- degree(g3)
 df2 = data.frame(name = names(deg), degree = deg)
@@ -93,7 +98,6 @@ ggplot(data = df2, aes(x = name, y = degree)) +
   xlab("Student Names") +
   ylab("Degrees")
 ```
-### Part 4: Results
 
-
-### Part 5: Conclusion
+### Part 4: Conclusion
+Through the statistic analysis, we could conclude that the people who plays a vital role (has the most degree) in the small cluster/group also plays a vital role in the external network. And through the social network graph, we could say that with such small students, people tend to choose study parteners randomly, but gradually choose other partners though the existing partners.
